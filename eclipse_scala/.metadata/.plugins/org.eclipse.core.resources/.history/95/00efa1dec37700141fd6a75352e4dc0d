@@ -1,0 +1,22 @@
+package squareroot
+
+object SquareRoot {
+  println("Welcome to the Scala Square Root worksheet") //> Welcome to the Scala worksheet
+  
+  10+10/2
+  
+  def abs(x: Double): Double 
+  
+  def sqrt(x: Double): Double = {
+  	def sqrtIter(x: Double, guess: Double) = 
+  		if (isGoodEnough(x, guess)) x
+  		else sqrtIter(x, improve(x,guess))
+  		
+  	def isGoodEnough(x: Double, guess: Double) =
+  		if (guess*guess - x < 0.001) true
+  		else false
+  		
+  	def improve(x: Double, guess: Double) =
+  				
+  }
+}

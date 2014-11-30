@@ -1,0 +1,12 @@
+package squareroot
+
+object SquareRoot {
+  println("Welcome to the Scala Square Root worksheet")
+                                                  //> Welcome to the Scala Square Root worksheet
+  
+  (10+10/2)/2                                     //> res0: Int = 7
+  (10.0+7/2)/2                                    //> res1: Double = 6.5
+ 	(10.0+6/2)/2                              //> res2: Double = 6.5
+ 
+  
+}

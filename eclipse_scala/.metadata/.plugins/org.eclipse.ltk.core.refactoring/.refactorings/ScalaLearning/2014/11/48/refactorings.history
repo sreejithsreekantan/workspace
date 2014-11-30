@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ScalaLearning/src/week1/blockScope.sc&apos; to &apos;BlockScope.sc&apos;" description="Rename resource &apos;blockScope.sc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/week1/blockScope.sc" name="BlockScope.sc" stamp="1417267839851" updateReferences="true"/>
+</session>

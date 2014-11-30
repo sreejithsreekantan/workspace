@@ -1,0 +1,5 @@
+package squareroot
+
+object SquareRoot {
+  println("Welcome to the Scala worksheet")
+}

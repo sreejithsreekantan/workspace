@@ -1,0 +1,9 @@
+package squareroot
+
+object SquareRoot {
+  println("Welcome to the Scala Square Root worksheet")
+  
+  10+10/2
+  
+  
+}

@@ -1,0 +1,23 @@
+package week1
+
+object blockScope {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+  
+  
+  def sqrt(x: Double): Double = {
+  	def abs(x: Double): Double =
+  	if (x<0) -x else x                        //> abs: (x: Double)Double
+  
+  	def sqrtIter(x: Double, guess: Double): Double =
+  		if (isGoodEnough(x, guess)) guess
+  		else sqrtIter(x, improve(x,guess))//> sqrtIter: (x: Double, guess: Double)Double
+  
+  	def isGoodEnough(x: Double, guess: Double) =
+  		abs(guess*guess - x) < 0.001      //> isGoodEnough: (x: Double, guess: Double)Boolean
+  		
+  	def improve(x: Double,guess: Double) =
+  		(guess + x/guess)/2               //> improve: (x: Double, guess: Double)Double
+  			
+  	sqrtIter(x, 1.0)
+  }                
+}

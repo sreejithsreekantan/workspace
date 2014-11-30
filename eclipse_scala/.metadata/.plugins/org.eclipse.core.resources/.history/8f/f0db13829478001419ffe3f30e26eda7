@@ -1,0 +1,19 @@
+package week2
+
+object GenericRangeOperation {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+
+	def RangeOperSum(f: Int => Int)
+						(Oper: (Int, Int) => Int)
+						(a: Int, b: Int) =
+	{
+		def loop(a: Int, acc: Int): Int =
+		{
+			if (a>b) acc
+			else loop(a+1, Oper(f(a),acc))
+		}
+		loop(a+1,f(a))
+	}                                         //> Range: (f: Int => Int)(Oper: (Int, Int) => Int)(a: Int, b: Int)Unit
+	
+	RangeOperSum(x => x)((x, y) => x+y)(1,5)
+}

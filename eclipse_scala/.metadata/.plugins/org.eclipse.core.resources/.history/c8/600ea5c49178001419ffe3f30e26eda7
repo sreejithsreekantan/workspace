@@ -1,0 +1,7 @@
+package week2
+
+object ProductOfRange {
+  println("Welcome to the Scala worksheet")
+  
+  d
+}

@@ -1,0 +1,33 @@
+package week2
+
+object GenericRangeOperation {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+
+	def RangeOperSum1(f: Int => Int)
+						(Oper: (Int, Int) => Int)
+						(a: Int, b: Int): Int =
+	{
+		if (a == b) f(a)
+		else Oper(f(a), RangeOperSum1(f)(Oper)(a+1, b))
+	}                                         //> RangeOperSum1: (f: Int => Int)(Oper: (Int, Int) => Int)(a: Int, b: Int)Int
+
+	def RangeOperSum(f: Int => Int)
+						(Oper: (Int, Int) => Int)
+						(a: Int, b: Int) =
+	{
+		def loop(a: Int, acc: Int): Int =
+		{
+			if (a>b) acc
+			else loop(a+1, Oper(f(a),acc))
+		}
+		loop(a+1,f(a))
+	}                                         //> RangeOperSum: (f: Int => Int)(Oper: (Int, Int) => Int)(a: Int, b: Int)Int
+	
+	RangeOperSum1(x => x)((x, y) => x+y)(1,5) //> res0: Int = 15
+	RangeOperSum(x => x)((x, y) => x+y)(1,5)  //> res1: Int = 15
+	RangeOperSum1(x => x)((x, y) => x*y)(1,5) //> res2: Int = 120
+	RangeOperSum(x => x)((x, y) => x*y)(1,5)  //> res3: Int = 120
+	RangeOperSum1(x => x*x)((x, y) => x+y)(1,5)
+                                                  //> res4: Int = 55
+	RangeOperSum(x => x*x)((x, y) => x+y)(1,5)//> res5: Int = 55
+}

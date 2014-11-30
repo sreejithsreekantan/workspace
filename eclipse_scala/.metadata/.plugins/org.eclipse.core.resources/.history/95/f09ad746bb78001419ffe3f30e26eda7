@@ -1,0 +1,15 @@
+package week3
+
+object Rational {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+	new Rational(1, 2)                        //> res0: week3.Rational = week3.Rational@18678a
+	
+	val n = new Rational(1, 2)
+	n.numer
+	n.denom
+}
+
+class Rational(x: Int, y: Int) {
+	def numer = x
+	def denom = y
+}

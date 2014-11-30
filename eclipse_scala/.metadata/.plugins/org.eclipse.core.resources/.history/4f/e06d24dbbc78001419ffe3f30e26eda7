@@ -1,0 +1,41 @@
+package week3
+
+object Rational {
+  println("Welcome to the Scala worksheet")
+	new Rational(1, 2)
+	
+	val n = new Rational(1, 2)
+	n.numer
+	n.denom
+	
+	val y = new Rational(2, 3)
+	n.add(y)
+	
+	n.sub(y)
+	
+	val z = n.neg
+	
+	n + y + z
+}
+
+class Rational(x: Int, y: Int) {
+	def numer = x
+	def denom = y
+	
+	def add(that: Rational) =
+		new Rational(
+			numer * that.denom + that.numer * denom,
+			denom * that.denom
+			)
+			
+	def sub(that: Rational) =
+		new Rational(
+			numer * that.denom - that.numer * denom,
+			denom * that.denom
+			)
+	def neg =
+		new Rational(-numer, denom)
+			 		
+	override def toString() =
+		numer + "/" + denom
+}
